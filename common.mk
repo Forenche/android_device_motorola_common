@@ -94,6 +94,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions
+
+# Sensor HAL
+TARGET_BUILDS_OSS_SENSORS_SUBHAL := true
+
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 

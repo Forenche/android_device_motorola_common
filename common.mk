@@ -97,6 +97,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Hardware
+$(call inherit-product, hardware/motorola/common.mk)
+
 $(call inherit-product, device/motorola/common/common-init.mk)
 $(call inherit-product, device/motorola/common/common-packages.mk)
 $(call inherit-product, device/motorola/common/common-perm.mk)

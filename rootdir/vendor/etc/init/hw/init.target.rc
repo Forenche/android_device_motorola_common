@@ -184,3 +184,8 @@ on property:ro.vendor.hw.ram=8GB
     setprop dalvik.vm.heaptargetutilization 0.46
     setprop dalvik.vm.heapminfree 8m
     setprop dalvik.vm.heapmaxfree 48m
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    sleep 5
+    echo c > /proc/sysrq-trigger
